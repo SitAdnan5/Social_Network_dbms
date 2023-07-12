@@ -30,7 +30,7 @@
             echo $posted_time;
             echo $posted_date;
 
-            $destination = '/opt/xampp/htdocs/dbms/post/'.$post_filename;
+            $destination = 'C:\xampp\htdocs\dbms\post\\'.$post_filename;
             $sql = "INSERT INTO post(post_file,post_data,post_time,heading,description,likes,user_id,meridian) VALUES('$post_filename','$posted_date','$posted_time','$heading','$description',0,$user_id,'$meridian');";
             if(in_array($final_type,$standard))
             {

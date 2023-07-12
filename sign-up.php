@@ -132,7 +132,7 @@ ob_start();
 
         $profile_name = $type[0] . uniqid('',true). ".".$type;
 
-        $destination_location = '/opt/xampp/htdocs/dbms/profile/'.$profile_name;
+        $destination_location = 'C:\xampp\htdocs\dbms\profile\\'.$profile_name;
 
         if(in_array($type,$standard)){
         $sql = "INSERT INTO user(user_name,email,dob,profile_img,dept_id,college_id,password,bio) VALUES('$username','$email','$dob','$profile_name','$department','$college','$password','need bio');";
@@ -146,8 +146,6 @@ ob_start();
             $_SESSION['error3'] = 'File not supported';
             header('location:sign-up.php');
         }
-
-    
     }
     ?>
     <?php

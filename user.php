@@ -3,6 +3,6 @@
 include('menu.php');
 echo "<br><br><br><br>";
 ?>
-<?php 
+<?php
 include('post.php');
 ?>
