@@ -1,42 +1,51 @@
+<?php
+include('component/connect.php');
+include('functions.php');
+$result = retrive_post($_SESSION['user_data'][0]['user_id'],$conn);
+?>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Solway&display=swap');
+        <?php
+        include 'css/post.css';
+        ?>
     </style>
 </head>
 <body>
+
     <!-- *************************************************post-data*********************************************** -->
    <div class="outer-box">
-
+   <?php if($result != false){ ?>
+    <?php foreach($result as $post){ ?>
     <div class="card">
         <div class="heading">
-            <div class="profile-image"></div>
-            <p class="name">Nandeesh M</p>
-            <p class="time">12:06AM</p>
+            <div class="profile-image" style="background-image: url('profile/<?php echo $post['profile_img'];?>');"></div>
+            <p class="name"><?php echo $post['user_name']; ?></p>
+            <p class="time"><?php echo $post['post_time']; echo $post['meridian'];?></p>
         </div>
         <div class="image">
-            <img src="images/behrouz-sasani-khMxnuosSV4-unsplash.jpg" width="100%">
+            <img src="<?php echo 'post/'.$post['post_file']; ?>" width="100%">
         </div>
         <div class="description">
             <h2 class="title">
-                Science
+                <?php echo $post['heading']; ?>
             </h2>
             <br>
             <p class="about">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut minus aperiam ducimus quaerat qui voluptatum quod! Dolorum dolor voluptatem similique doloremque magni? Mollitia vitae inventore assumenda dolore ipsum quos odio!
-                Ducimus, laborum ab odio, molestias doloribus facere provident id perspiciatis at amet ut sunt, sequi esse placeat necessitatibus saepe nam qui totam quisquam magni accusantium sed consequatur. Debitis, iste amet?
-                Enim reiciendis fugiat sapiente ad rerum. Asperiores ut molestiae numquam unde aspernatur voluptatibus sapiente cumque quas dolore? Reprehenderit eveniet totam assumenda debitis accusantium voluptate minus autem, corrupti beatae ea dolor?
+                <?php echo $post['description']; ?>
             </p>
         </div>
         <br>
         <div class="date">
-            <h4>23-06-2020</h4>
+            <h4><?php echo $post['post_data']; ?></h4>
         </div>
         <br>
     </div>
-
+    <?php }?>
+<?php }?>
 
     <!--************ Checking for the other post *************-->
 
-    <div class="card">
+    <!-- <div class="card">
         <div class="heading">
             <div class="profile-image"></div>
             <p class="name">Nandeesh M</p>
@@ -63,7 +72,7 @@
             
         </div>
         <br>
-    </div>
+    </div> -->
 
     <!-- ***********check end********************************* -->
 

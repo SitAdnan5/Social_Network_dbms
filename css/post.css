@@ -11,13 +11,18 @@
     align-items: center;
     justify-content: space-between;
 }
+.dept
+{
+    color: #4d5350;
+    font-family: 'Rubik', sans-serif;
+}
 .card
 {
     width: 598px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0fb86f;
+    background-color: white;
     box-shadow: 2px 2px 10px rgb(39, 37, 37);
     border-radius: 3px;
     margin-bottom: 2px;
@@ -31,7 +36,7 @@
 
 .heading
 {
-    background-color: #0fb86f;
+    background-color: white;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -43,12 +48,11 @@
 
     margin-bottom: 10px;
     margin-left: 10px;
-    border: 2px solid white;
+    border: 2px solid black;
     margin-top: 10px;
     width: 71px;
     height: 71px;
     border-radius: 50%;
-    background:url('images/omid-armin-6G2G6_rq-B0-unsplash.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -58,6 +62,10 @@
 .date
 {
     width: 560px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .name
@@ -65,7 +73,7 @@
     font-weight: 600;
     text-align: center;
     font-size: 17px;
-    color: white;
+    color: black;
     font-family: 'Rubik', sans-serif;
     margin-right: 10px;
 }
@@ -74,7 +82,7 @@
 
     margin-top: 5px;
     font-family: 'Solway', serif;
-    color: white;
+    color: #0fb86f;
     font-size: 30px;
 }
 
@@ -83,8 +91,8 @@
     font-weight: 350;
     font-size: 17px;
     word-spacing: 2.2px;
-    color: white;
-    font-family: 'Rubik', sans-serif;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-right: 10px;
 }
 
@@ -92,12 +100,7 @@
 {
     font-weight: 600;
     text-align: center;
-    padding: 10px;
-    width: 180px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: white;
-    color: #0D9E5E;
+    color: black;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -110,7 +113,7 @@
     height: 40px;
     border-radius: 20px;
     background-color: white;
-    color: #0D9E5E;
+   color: black;
     font-family: 'Rubik', sans-serif;
     margin-right: 7px;
 }
